@@ -30,6 +30,7 @@
 		FA4B10F41F99155500F9C7AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA4B10F61F99155500F9C7AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA4B10FC1F9918EE00F9C7AC /* Snake.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Snake.sks; sourceTree = "<group>"; };
+		FA4B10FE1F991F9300F9C7AC /* snoring.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = snoring.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +73,7 @@
 				FA4B10F31F99155500F9C7AC /* LaunchScreen.storyboard */,
 				FA4B10F61F99155500F9C7AC /* Info.plist */,
 				FA4B10FC1F9918EE00F9C7AC /* Snake.sks */,
+				FA4B10FE1F991F9300F9C7AC /* snoring.mp3 */,
 			);
 			path = SnakeTrap;
 			sourceTree = "<group>";
