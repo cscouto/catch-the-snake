@@ -15,6 +15,7 @@
 		FA4B10F01F99155500F9C7AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA4B10EE1F99155500F9C7AC /* Main.storyboard */; };
 		FA4B10F21F99155500F9C7AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA4B10F11F99155500F9C7AC /* Assets.xcassets */; };
 		FA4B10F51F99155500F9C7AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA4B10F31F99155500F9C7AC /* LaunchScreen.storyboard */; };
+		FA4B10FD1F9918EE00F9C7AC /* Snake.sks in Resources */ = {isa = PBXBuildFile; fileRef = FA4B10FC1F9918EE00F9C7AC /* Snake.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		FA4B10F11F99155500F9C7AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA4B10F41F99155500F9C7AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA4B10F61F99155500F9C7AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA4B10FC1F9918EE00F9C7AC /* Snake.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Snake.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				FA4B10F11F99155500F9C7AC /* Assets.xcassets */,
 				FA4B10F31F99155500F9C7AC /* LaunchScreen.storyboard */,
 				FA4B10F61F99155500F9C7AC /* Info.plist */,
+				FA4B10FC1F9918EE00F9C7AC /* Snake.sks */,
 			);
 			path = SnakeTrap;
 			sourceTree = "<group>";
@@ -134,6 +137,7 @@
 			files = (
 				FA4B10F01F99155500F9C7AC /* Main.storyboard in Resources */,
 				FA4B10E71F99155500F9C7AC /* GameScene.sks in Resources */,
+				FA4B10FD1F9918EE00F9C7AC /* Snake.sks in Resources */,
 				FA4B10F21F99155500F9C7AC /* Assets.xcassets in Resources */,
 				FA4B10F51F99155500F9C7AC /* LaunchScreen.storyboard in Resources */,
 				FA4B10E91F99155500F9C7AC /* Actions.sks in Resources */,
