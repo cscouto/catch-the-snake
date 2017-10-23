@@ -9,9 +9,23 @@
 import SpriteKit
 import GameplayKit
 
+protocol CustomNodeEvent {
+    func didMoveToScene()
+}
+
 class GameScene: SKScene {
     
+    var snakeNode: SnakeNode!
+    
     override func didMove(to view: SKView) {
+        enumerateChildNodes(withName: "//*", using: {
+            node, _ in
+            if let customNode = node as? CustomNodeEvent {
+                customNode.didMoveToScene()
+            }
+        })
+        
+        snakeNode = childNode(withName: "//snake_body") as! SnakeNode
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

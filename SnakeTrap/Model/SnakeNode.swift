@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class SnakeNode: SKSpriteNode {
+class SnakeNode: SKSpriteNode, CustomNodeEvent {
     func didMoveToScene(){
         let snakeBodyTexture = SKTexture(imageNamed: "snake-outline")
         parent?.physicsBody = SKPhysicsBody(texture: snakeBodyTexture, size: snakeBodyTexture.size())
