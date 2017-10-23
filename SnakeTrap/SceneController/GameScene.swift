@@ -13,11 +13,14 @@ protocol CustomNodeEvent {
     func didMoveToScene()
 }
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var snakeNode: SnakeNode!
     
     override func didMove(to view: SKView) {
+        let playableRect = CGRect(x: -size.width/2, y: -size.height/3, width: size.width, height: size.height)
+        physicsBody = SKPhysicsBody(edgeLoopFrom: playableRect)
+        physicsWorld.contactDelegate = self
         enumerateChildNodes(withName: "//*", using: {
             node, _ in
             if let customNode = node as? CustomNodeEvent {
@@ -25,7 +28,7 @@ class GameScene: SKScene {
             }
         })
         
-        snakeNode = childNode(withName: "//snake_body") as! SnakeNode
+        snakeNode = childNode(withName: "//snake-body") as! SnakeNode
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
