@@ -31,6 +31,8 @@ protocol InteractiveNode {
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
+    var playable = true
+    
     override func didMove(to view: SKView) {
         let playableRect = CGRect(x: -size.width/2, y: -size.height/3, width: size.width, height: size.height)
         physicsBody = SKPhysicsBody(edgeLoopFrom: playableRect)
@@ -49,11 +51,36 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func didBegin(_ contact: SKPhysicsContact) {
         let collision = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
-        if collision == PhysicsCategory.Snake | PhysicsCategory.Cage {
-            print("Success!")
-        }else if collision == PhysicsCategory.Snake | PhysicsCategory.Edge{
-            print("Failed!")
+        
+        if !playable {
+            return
         }
+        
+        if collision == PhysicsCategory.Snake | PhysicsCategory.Cage {
+            //print("Success!")
+            win()
+        }else if collision == PhysicsCategory.Snake | PhysicsCategory.Edge{
+            //print("Failed!")
+            lose()
+        }
+    }
+    
+    func inGameMessage(text: String){
+        let message  = MessageNode(message: text)
+        message.position = CGPoint(x: frame.midX, y: frame.midY+(frame.midY/2))
+        addChild(message)
+    }
+    func win() {
+        playable = false
+        SKTAudio.sharedInstance().pauseBackgroundMusic()
+        run(SKAction.playSoundFileNamed("win.mp3", waitForCompletion: false))
+        inGameMessage(text: "Good Job!")
+    }
+    func lose() {
+        playable = false
+        SKTAudio.sharedInstance().pauseBackgroundMusic()
+        run(SKAction.playSoundFileNamed("lose.mp3", waitForCompletion: false))
+        inGameMessage(text: "Fail!")
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
