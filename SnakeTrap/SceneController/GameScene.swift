@@ -13,6 +13,10 @@ protocol CustomNodeEvent {
     func didMoveToScene()
 }
 
+protocol InteractiveNode {
+    func interact()
+}
+
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var snakeNode: SnakeNode!
