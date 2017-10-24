@@ -12,5 +12,10 @@ class SnakeNode: SKSpriteNode, CustomNodeEvent {
     func didMoveToScene(){
         let snakeBodyTexture = SKTexture(imageNamed: "snake-outline")
         parent?.physicsBody = SKPhysicsBody(texture: snakeBodyTexture, size: snakeBodyTexture.size())
+        
+        parent?.physicsBody?.categoryBitMask = PhysicsCategory.Snake
+        parent?.physicsBody?.collisionBitMask = PhysicsCategory.Block | PhysicsCategory.Edge
+        
+        parent?.physicsBody?.contactTestBitMask = PhysicsCategory.Cage | PhysicsCategory.Edge
     }
 }

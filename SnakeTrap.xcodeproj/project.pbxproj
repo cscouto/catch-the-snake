@@ -20,6 +20,7 @@
 		FA668CF71F9F5E4B0043745F /* BlockNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA668CF61F9F5E4B0043745F /* BlockNode.swift */; };
 		FA668CF91F9F5FA00043745F /* pop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA668CF81F9F5FA00043745F /* pop.mp3 */; };
 		FA668CFA1F9F5FA80043745F /* snoring.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA4B10FE1F991F9300F9C7AC /* snoring.mp3 */; };
+		FA668CFC1F9F96600043745F /* CageNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA668CFB1F9F96600043745F /* CageNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		FA4B10FE1F991F9300F9C7AC /* snoring.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = snoring.mp3; sourceTree = "<group>"; };
 		FA668CF61F9F5E4B0043745F /* BlockNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockNode.swift; sourceTree = "<group>"; };
 		FA668CF81F9F5FA00043745F /* pop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pop.mp3; sourceTree = "<group>"; };
+		FA668CFB1F9F96600043745F /* CageNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CageNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 			children = (
 				FA20D0131F9E333000FC7F05 /* SnakeNode.swift */,
 				FA668CF61F9F5E4B0043745F /* BlockNode.swift */,
+				FA668CFB1F9F96600043745F /* CageNode.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				FA4B10ED1F99155500F9C7AC /* GameViewController.swift in Sources */,
 				FA20D0141F9E333000FC7F05 /* SnakeNode.swift in Sources */,
 				FA4B10E51F99155500F9C7AC /* AppDelegate.swift in Sources */,
+				FA668CFC1F9F96600043745F /* CageNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
