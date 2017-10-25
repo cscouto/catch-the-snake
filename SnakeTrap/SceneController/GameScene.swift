@@ -21,6 +21,7 @@ struct PhysicsCategory {
 var snakeNode: SnakeNode!
 var cageNode: CageNode!
 var lastLevel = 2
+var allowTouches = true
 
 protocol CustomNodeEvent {
     func didMoveToScene()
@@ -59,7 +60,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         let levelNode = LevelNode(message: "Level: \(currentLevel)")
         levelNode.position = CGPoint(x: 270, y: 270)
-        self.addChild(LevelNode)
+        self.addChild(levelNode)
+        
+        let restartButton = SKSpriteNode(imageNamed: "reset-icon")
+        restartButton.position = CGPoint(x: 1950, y: 270)
+        restartButton.name = "restart"
+        restartButton.setScale(0.6)
+        self.addChild(restartButton)
+        let rotate = SKAction.rotate(byAngle: 6.28, duration: 1)
+        let rotateAction = SKAction.repeat(rotate, count: 1)
+        restartButton.run(rotateAction)
     }
     
     func didBegin(_ contact: SKPhysicsContact) {
@@ -84,9 +94,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(message)
     }
     @objc func newGame(){
+        allowTouches = true
         view?.presentScene(GameScene.level(levelNum: currentLevel))
     }
     func win() {
+        allowTouches = false
+        
         if currentLevel < lastLevel {
             currentLevel += 1
         }else{
@@ -99,6 +112,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         perform(#selector(GameScene.newGame), with: nil, afterDelay: 4)
     }
     func lose() {
+        allowTouches = false
         playable = false
         SKTAudio.sharedInstance().pauseBackgroundMusic()
         run(SKAction.playSoundFileNamed("lose.mp3", waitForCompletion: false))
@@ -107,6 +121,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch  = touches
+        let location = touch.first!.location(in: self)
+        let node = self.nodes(at: location).first
+        if node?.name == "restart" && allowTouches {
+            newGame()
+        }
     }
     
     override func update(_ currentTime: TimeInterval) {
