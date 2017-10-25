@@ -70,6 +70,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let rotate = SKAction.rotate(byAngle: 6.28, duration: 1)
         let rotateAction = SKAction.repeat(rotate, count: 1)
         restartButton.run(rotateAction)
+        
+        SKTAudio.sharedInstance().playBackgroundMusic(filename: "jungle.wav")
     }
     
     func didBegin(_ contact: SKPhysicsContact) {
@@ -85,6 +87,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }else if collision == PhysicsCategory.Snake | PhysicsCategory.Edge{
             //print("Failed!")
             lose()
+            snakeNode.wakeUp()
         }
     }
     

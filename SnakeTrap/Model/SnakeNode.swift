@@ -18,4 +18,16 @@ class SnakeNode: SKSpriteNode, CustomNodeEvent {
         
         parent?.physicsBody?.contactTestBitMask = PhysicsCategory.Cage | PhysicsCategory.Edge
     }
+    
+    func wakeUp(){
+        for child in children {
+            child.removeFromParent()
+        }
+        texture = nil
+        color = SKColor.clear
+        
+        let snakeAwake = SKSpriteNode(fileNamed: "SnakeWakeup")?.childNode(withName: "snake-awake")!
+        snakeAwake?.move(toParent: self)
+        snakeAwake?.position = CGPoint(x: 0, y: 50)
+    }
 }
