@@ -32,6 +32,14 @@ protocol InteractiveNode {
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var playable = true
+    var currentLevel = 1
+    
+    class func level(levelNum: Int) -> GameScene? {
+        let scene = GameScene(fileNamed: "Level\(levelNum)")!
+        scene.currentLevel = levelNum
+        scene.scaleMode = .aspectFill
+        return scene
+    }
     
     override func didMove(to view: SKView) {
         let playableRect = CGRect(x: -size.width/2, y: -size.height/3, width: size.width, height: size.height)
@@ -70,6 +78,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         message.position = CGPoint(x: frame.midX, y: frame.midY+(frame.midY/2))
         addChild(message)
     }
+    @objc func newGame(){
+        view?.presentScene(GameScene.level(levelNum: currentLevel))
+    }
     func win() {
         playable = false
         SKTAudio.sharedInstance().pauseBackgroundMusic()
@@ -81,6 +92,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         SKTAudio.sharedInstance().pauseBackgroundMusic()
         run(SKAction.playSoundFileNamed("lose.mp3", waitForCompletion: false))
         inGameMessage(text: "Fail!")
+        perform(#selector(GameScene.newGame), with: nil, afterDelay: 4)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
