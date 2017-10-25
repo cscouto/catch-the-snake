@@ -20,6 +20,7 @@ struct PhysicsCategory {
 
 var snakeNode: SnakeNode!
 var cageNode: CageNode!
+var lastLevel = 2
 
 protocol CustomNodeEvent {
     func didMoveToScene()
@@ -55,6 +56,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         })
         cageNode = childNode(withName: "cage") as! CageNode
         snakeNode = childNode(withName: "//snake-body") as! SnakeNode
+        
+        let levelNode = LevelNode(message: "Level: \(currentLevel)")
+        levelNode.position = CGPoint(x: 270, y: 270)
+        self.addChild(LevelNode)
     }
     
     func didBegin(_ contact: SKPhysicsContact) {
@@ -82,10 +87,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         view?.presentScene(GameScene.level(levelNum: currentLevel))
     }
     func win() {
+        if currentLevel < lastLevel {
+            currentLevel += 1
+        }else{
+            currentLevel = 1
+        }
         playable = false
         SKTAudio.sharedInstance().pauseBackgroundMusic()
         run(SKAction.playSoundFileNamed("win.mp3", waitForCompletion: false))
         inGameMessage(text: "Good Job!")
+        perform(#selector(GameScene.newGame), with: nil, afterDelay: 4)
     }
     func lose() {
         playable = false
