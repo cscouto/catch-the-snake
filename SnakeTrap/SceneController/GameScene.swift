@@ -39,7 +39,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     class func level(levelNum: Int) -> GameScene? {
         let scene = GameScene(fileNamed: "Level\(levelNum)")!
         scene.currentLevel = levelNum
-        scene.scaleMode = .aspectFill
+        scene.scaleMode = .aspectFit
         return scene
     }
     
@@ -59,7 +59,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         snakeNode = childNode(withName: "//snake-body") as! SnakeNode
         
         let levelNode = LevelNode(message: "Level: \(currentLevel)")
-        levelNode.position = CGPoint(x: 270, y: 270)
+        levelNode.position = CGPoint(x: -(size.width/2)+100, y: 0)
         self.addChild(levelNode)
         
         let restartButton = SKSpriteNode(imageNamed: "reset-icon")

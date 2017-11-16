@@ -14,10 +14,10 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let scene = MainMenuScene(size: CGSize(width: 2048, height: 1536))
+        let scene = MainMenuScene()
         if let view = self.view as! SKView? {
             // Set the scale mode to scale to fit the window
-            scene.scaleMode = .aspectFill
+            scene.scaleMode = .fill
             // Present the scene
             
             view.ignoresSiblingOrder = true
