@@ -17,7 +17,7 @@ class MainMenuScene: SKScene {
     }
     func sceneTapped(){
         let myScene = GameScene.level(levelNum: 1)
-        myScene?.scaleMode = .aspectFit
+        myScene?.scaleMode = .fill
         let reveal = SKTransition.doorway(withDuration: 0.8)
         self.view?.presentScene(myScene!, transition: reveal)
     }

@@ -39,7 +39,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     class func level(levelNum: Int) -> GameScene? {
         let scene = GameScene(fileNamed: "Level\(levelNum)")!
         scene.currentLevel = levelNum
-        scene.scaleMode = .aspectFit
+        scene.scaleMode = .fill
         return scene
     }
     
@@ -63,7 +63,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(levelNode)
         
         let restartButton = SKSpriteNode(imageNamed: "reset-icon")
-        restartButton.position = CGPoint(x: 1950, y: 270)
+        restartButton.position = CGPoint(x: (size.width/2)-100, y: -size.height/3)
         restartButton.name = "restart"
         restartButton.setScale(0.6)
         self.addChild(restartButton)
