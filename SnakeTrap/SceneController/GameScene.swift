@@ -20,7 +20,7 @@ struct PhysicsCategory {
 
 var snakeNode: SnakeNode!
 var cageNode: CageNode!
-var lastLevel = 2
+var lastLevel = 15
 var allowTouches = true
 
 protocol CustomNodeEvent {
