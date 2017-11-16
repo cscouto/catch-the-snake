@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA0D7E191FBDF3D000152E82 /* Level14.sks in Resources */ = {isa = PBXBuildFile; fileRef = FA0D7E0B1FBDF3CE00152E82 /* Level14.sks */; };
+		FA0D7E1A1FBDF3D000152E82 /* Level15.sks in Resources */ = {isa = PBXBuildFile; fileRef = FA0D7E0C1FBDF3CE00152E82 /* Level15.sks */; };
+		FA0D7E1B1FBDF3D000152E82 /* Level4.sks in Resources */ = {isa = PBXBuildFile; fileRef = FA0D7E0D1FBDF3CF00152E82 /* Level4.sks */; };
+		FA0D7E1C1FBDF3D000152E82 /* Level11.sks in Resources */ = {isa = PBXBuildFile; fileRef = FA0D7E0E1FBDF3CF00152E82 /* Level11.sks */; };
+		FA0D7E1D1FBDF3D000152E82 /* Level13.sks in Resources */ = {isa = PBXBuildFile; fileRef = FA0D7E0F1FBDF3CF00152E82 /* Level13.sks */; };
+		FA0D7E1E1FBDF3D000152E82 /* Level8.sks in Resources */ = {isa = PBXBuildFile; fileRef = FA0D7E101FBDF3CF00152E82 /* Level8.sks */; };
+		FA0D7E1F1FBDF3D000152E82 /* Level9.sks in Resources */ = {isa = PBXBuildFile; fileRef = FA0D7E111FBDF3CF00152E82 /* Level9.sks */; };
+		FA0D7E201FBDF3D000152E82 /* Level3.sks in Resources */ = {isa = PBXBuildFile; fileRef = FA0D7E121FBDF3CF00152E82 /* Level3.sks */; };
+		FA0D7E211FBDF3D000152E82 /* Level2.sks in Resources */ = {isa = PBXBuildFile; fileRef = FA0D7E131FBDF3CF00152E82 /* Level2.sks */; };
+		FA0D7E221FBDF3D000152E82 /* Level10.sks in Resources */ = {isa = PBXBuildFile; fileRef = FA0D7E141FBDF3CF00152E82 /* Level10.sks */; };
+		FA0D7E231FBDF3D000152E82 /* Level12.sks in Resources */ = {isa = PBXBuildFile; fileRef = FA0D7E151FBDF3CF00152E82 /* Level12.sks */; };
+		FA0D7E241FBDF3D000152E82 /* Level7.sks in Resources */ = {isa = PBXBuildFile; fileRef = FA0D7E161FBDF3D000152E82 /* Level7.sks */; };
+		FA0D7E251FBDF3D000152E82 /* Level6.sks in Resources */ = {isa = PBXBuildFile; fileRef = FA0D7E171FBDF3D000152E82 /* Level6.sks */; };
+		FA0D7E261FBDF3D000152E82 /* Level5.sks in Resources */ = {isa = PBXBuildFile; fileRef = FA0D7E181FBDF3D000152E82 /* Level5.sks */; };
 		FA20D0141F9E333000FC7F05 /* SnakeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA20D0131F9E333000FC7F05 /* SnakeNode.swift */; };
 		FA37F67D1FA0BF16000FE34D /* LevelNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37F67C1FA0BF16000FE34D /* LevelNode.swift */; };
 		FA37F67F1FA0C3CC000FE34D /* jungle.wav in Resources */ = {isa = PBXBuildFile; fileRef = FA37F67E1FA0C3CC000FE34D /* jungle.wav */; };
@@ -32,6 +46,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA0D7E0B1FBDF3CE00152E82 /* Level14.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level14.sks; sourceTree = "<group>"; };
+		FA0D7E0C1FBDF3CE00152E82 /* Level15.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level15.sks; sourceTree = "<group>"; };
+		FA0D7E0D1FBDF3CF00152E82 /* Level4.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level4.sks; sourceTree = "<group>"; };
+		FA0D7E0E1FBDF3CF00152E82 /* Level11.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level11.sks; sourceTree = "<group>"; };
+		FA0D7E0F1FBDF3CF00152E82 /* Level13.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level13.sks; sourceTree = "<group>"; };
+		FA0D7E101FBDF3CF00152E82 /* Level8.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level8.sks; sourceTree = "<group>"; };
+		FA0D7E111FBDF3CF00152E82 /* Level9.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level9.sks; sourceTree = "<group>"; };
+		FA0D7E121FBDF3CF00152E82 /* Level3.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level3.sks; sourceTree = "<group>"; };
+		FA0D7E131FBDF3CF00152E82 /* Level2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level2.sks; sourceTree = "<group>"; };
+		FA0D7E141FBDF3CF00152E82 /* Level10.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level10.sks; sourceTree = "<group>"; };
+		FA0D7E151FBDF3CF00152E82 /* Level12.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level12.sks; sourceTree = "<group>"; };
+		FA0D7E161FBDF3D000152E82 /* Level7.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level7.sks; sourceTree = "<group>"; };
+		FA0D7E171FBDF3D000152E82 /* Level6.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level6.sks; sourceTree = "<group>"; };
+		FA0D7E181FBDF3D000152E82 /* Level5.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level5.sks; sourceTree = "<group>"; };
 		FA20D0131F9E333000FC7F05 /* SnakeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeNode.swift; sourceTree = "<group>"; };
 		FA37F67C1FA0BF16000FE34D /* LevelNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelNode.swift; sourceTree = "<group>"; };
 		FA37F67E1FA0C3CC000FE34D /* jungle.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = jungle.wav; sourceTree = "<group>"; };
@@ -72,6 +100,20 @@
 		FA20D0151F9E342B00FC7F05 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				FA0D7E131FBDF3CF00152E82 /* Level2.sks */,
+				FA0D7E121FBDF3CF00152E82 /* Level3.sks */,
+				FA0D7E0D1FBDF3CF00152E82 /* Level4.sks */,
+				FA0D7E181FBDF3D000152E82 /* Level5.sks */,
+				FA0D7E171FBDF3D000152E82 /* Level6.sks */,
+				FA0D7E161FBDF3D000152E82 /* Level7.sks */,
+				FA0D7E101FBDF3CF00152E82 /* Level8.sks */,
+				FA0D7E111FBDF3CF00152E82 /* Level9.sks */,
+				FA0D7E141FBDF3CF00152E82 /* Level10.sks */,
+				FA0D7E0E1FBDF3CF00152E82 /* Level11.sks */,
+				FA0D7E151FBDF3CF00152E82 /* Level12.sks */,
+				FA0D7E0F1FBDF3CF00152E82 /* Level13.sks */,
+				FA0D7E0B1FBDF3CE00152E82 /* Level14.sks */,
+				FA0D7E0C1FBDF3CE00152E82 /* Level15.sks */,
 				FA4B10FC1F9918EE00F9C7AC /* Snake.sks */,
 				FA37F6801FA0C452000FE34D /* SnakeWakeup.sks */,
 				FA4B10E61F99155500F9C7AC /* Level1.sks */,
@@ -209,14 +251,28 @@
 				FA4B10F01F99155500F9C7AC /* Main.storyboard in Resources */,
 				FA668CFA1F9F5FA80043745F /* snoring.mp3 in Resources */,
 				FA668CFE1F9F991F0043745F /* lose.mp3 in Resources */,
+				FA0D7E1C1FBDF3D000152E82 /* Level11.sks in Resources */,
+				FA0D7E1B1FBDF3D000152E82 /* Level4.sks in Resources */,
+				FA0D7E201FBDF3D000152E82 /* Level3.sks in Resources */,
+				FA0D7E191FBDF3D000152E82 /* Level14.sks in Resources */,
+				FA0D7E1F1FBDF3D000152E82 /* Level9.sks in Resources */,
+				FA0D7E1D1FBDF3D000152E82 /* Level13.sks in Resources */,
 				FA4B10E71F99155500F9C7AC /* Level1.sks in Resources */,
+				FA0D7E1E1FBDF3D000152E82 /* Level8.sks in Resources */,
+				FA0D7E1A1FBDF3D000152E82 /* Level15.sks in Resources */,
+				FA0D7E221FBDF3D000152E82 /* Level10.sks in Resources */,
 				FA4B10FD1F9918EE00F9C7AC /* Snake.sks in Resources */,
+				FA0D7E241FBDF3D000152E82 /* Level7.sks in Resources */,
+				FA0D7E251FBDF3D000152E82 /* Level6.sks in Resources */,
 				FA668D001F9F992A0043745F /* win.mp3 in Resources */,
+				FA0D7E231FBDF3D000152E82 /* Level12.sks in Resources */,
 				FA4B10F21F99155500F9C7AC /* Assets.xcassets in Resources */,
+				FA0D7E261FBDF3D000152E82 /* Level5.sks in Resources */,
 				FA4B10F51F99155500F9C7AC /* LaunchScreen.storyboard in Resources */,
 				FA668CF91F9F5FA00043745F /* pop.mp3 in Resources */,
 				FA37F6811FA0C452000FE34D /* SnakeWakeup.sks in Resources */,
 				FA37F67F1FA0C3CC000FE34D /* jungle.wav in Resources */,
+				FA0D7E211FBDF3D000152E82 /* Level2.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
