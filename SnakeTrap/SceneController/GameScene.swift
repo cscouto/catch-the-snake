@@ -20,7 +20,7 @@ struct PhysicsCategory {
 
 var snakeNode: SnakeNode!
 var cageNode: CageNode!
-var lastLevel = 15
+var lastLevel = 10
 var allowTouches = true
 
 protocol CustomNodeEvent {
@@ -57,10 +57,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         })
         cageNode = childNode(withName: "cage") as! CageNode
         snakeNode = childNode(withName: "//snake-body") as! SnakeNode
-        
+        snakeNode.isPaused = false
         let levelNode = LevelNode(message: "Level: \(currentLevel)")
         levelNode.position = CGPoint(x: -(size.width/2)+100, y: 0)
         self.addChild(levelNode)
+        levelNode.isPaused = false
         
         let restartButton = SKSpriteNode(imageNamed: "reset-icon")
         restartButton.position = CGPoint(x: (size.width/2)-100, y: -size.height/3)
@@ -98,7 +99,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     @objc func newGame(){
         allowTouches = true
-        view?.presentScene(GameScene.level(levelNum: currentLevel))
+        let level = GameScene.level(levelNum: currentLevel)
+        level?.isPaused = false
+        view?.presentScene(level)
     }
     func win() {
         allowTouches = false
